@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="">
       <header className="">
-        new content added in react app successfully in to now a day today yes. it today hay say it agian
+        new content added in react app successfully in to now a day today yes. it today hay say it again
 
 
         
