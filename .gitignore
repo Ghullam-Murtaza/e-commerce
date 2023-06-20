@@ -5,7 +5,14 @@
 /.pnp
 .pnp.js
 
-/.yarn
+# yarn 3 (.yarn folder)
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # testing
 /coverage
