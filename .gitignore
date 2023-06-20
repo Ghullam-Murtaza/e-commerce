@@ -5,6 +5,19 @@
 /.pnp
 .pnp.js
 
+# yarn 3 (.yarn folder)
+.pnp.*
+.yarn/*
+# uncomment when uploading as a final commit (as size of upload is more than 30 MB) 
+# !.yarn/patches
+# !.yarn/plugins
+# !.yarn/releases
+# !.yarn/sdks
+# !.yarn/versions
+
+# comment or remove it when uploading as a final commit (as size of upload is more than 30 MB)  
+.yarnrc.yml
+
 # testing
 /coverage
 
@@ -21,3 +34,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
