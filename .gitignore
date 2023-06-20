@@ -8,11 +8,12 @@
 # yarn 3 (.yarn folder)
 .pnp.*
 .yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+# uncomment when uploading as a final commit (as size of upload is more than 30 MB) 
+# !.yarn/patches
+# !.yarn/plugins
+# !.yarn/releases
+# !.yarn/sdks
+# !.yarn/versions
 
 # testing
 /coverage
