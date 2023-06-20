@@ -15,6 +15,9 @@
 # !.yarn/sdks
 # !.yarn/versions
 
+# comment or remove it when uploading as a final commit (as size of upload is more than 30 MB)  
+.yarnrc.yml
+
 # testing
 /coverage
 
