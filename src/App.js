@@ -1,14 +1,10 @@
+import Home from './pages/Home/Home';
 import './App.css';
 
 function App() {
   return (
     <div className="">
-      <header className="">
-        new content added in re iojioserjgodrgdg sdfdmsdfjs wef/sf;lsf j  fkfdfgdfl fsfdfdf
-
-
-        
-      </header>
+      <Home />
     </div>
   );
 }
