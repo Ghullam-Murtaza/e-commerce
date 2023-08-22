@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <div>
       <header>
-        here is header content
+        here is header 
       </header>
     </div>
   )
