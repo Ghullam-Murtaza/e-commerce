@@ -6,7 +6,7 @@ const AxilBar = () => {
   return (
     <React.Fragment>
       <div>
-        <ul className="row">
+        <ul>
           <li>English</li>
           <li>USD</li>
           <li>Help</li>
