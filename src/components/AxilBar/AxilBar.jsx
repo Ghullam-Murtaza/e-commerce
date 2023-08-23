@@ -14,18 +14,21 @@ const AxilBar = () => {
           <li>Sign In</li>
         </ul>
       </div>
-      {/* fluid='md' does not mean that the Container will become Fluid at 'md' breakpoint but it will become non-fluid (
-          with responsive pixel width) at that breakpoint as it's 'media-query' or 'breakpoint' funtionality works quite 
-          opposite of the Vanilla Bootsrap's class '.container-md' (that makes the Container Non-Fluid at 'md' breakpoint and
-          before that breakpoint the Container is Fluid without declaring it to be fluid as 'Block Elements' have their
-          default 'Widths' set to '100%')
-      */}
+      
       <Container className='bg-primary' fluid='md'>
         <Row>
           <Col>1 of 1</Col>
         </Row>
       </Container>
+      {/* Note:
+          fluid='md' does not mean that the Container will become Fluid at 'md' breakpoint but it will become non-fluid (
+          with responsive pixel width) at that breakpoint as it's 'media-query' or 'breakpoint' funtionality works quite 
+          opposite of the Vanilla Bootsrap's class '.container-md' (that makes the Container Non-Fluid at 'md' breakpoint and
+          before that breakpoint the Container is Fluid without declaring it to be fluid as 'Block Elements' have their
+          default 'Widths' set to '100%')
+      */}
     </ React.Fragment>
+    
   )
 }
 export default AxilBar
