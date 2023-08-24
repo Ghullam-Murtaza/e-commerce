@@ -16,8 +16,8 @@ const AxilBar = () => {
           <Col>
             <Row className='border border-warning border-3'>
               <Col  xs={3}>Help</Col>
-              <Col>Join Us</Col>
-              <Col>Sign In</Col>
+              <Col  xs={3}>Join Us</Col>
+              <Col xs={3}>Sign In</Col>
             </Row>
           </Col>
         </Row>
