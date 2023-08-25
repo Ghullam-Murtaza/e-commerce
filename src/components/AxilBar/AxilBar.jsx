@@ -43,6 +43,18 @@ const AxilBar = () => {
           column width of '12 columns' on all smaller breakpoints until that 'lg' breakpoint is reached. It's like the
           'auto layout width' feature of columns is disabled whenever a 'breakpoint' prop is given to the 'Col' component, so we
           need to make it 'true'.
+
+          'font-size':
+          there is no Bootstrap Class to make the font-size smaller than normal (16px or 1rem).
+          
+          'Row's column widths':
+          1) Column Widths given to Row component specifies the No. of Columns to fit next to each other in that particular Row.
+          And these no. of columns are only useful if the 'Col' components have the same width or same column span, otherwise
+          if you change the column span of 'Col' component, the no. of columns spanned are out of '12' columns and not from the
+          column width specified to 'Row' component (let say <Row sm={4}>).
+          2) And the column width specified to the nested 'Row' (Row inside a Col) has a working range of (1 to 6 and not 1 to 12)
+          may be because there are 2 'Col' in the parent 'Row', so one 'Col' gets 6 columns span and the nested 'Row' in that
+          'Col' is given 6 columns to fit next to each other (as may be because there are also 2 'Col' inside that nested 'Row').
       */}
     </ React.Fragment>
     
