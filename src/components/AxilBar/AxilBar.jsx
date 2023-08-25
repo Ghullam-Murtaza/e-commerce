@@ -8,7 +8,7 @@ const AxilBar = () => {
       <Container>
         <Row>
           <Col>
-            <Row sm="auto" className='border border-success border-3 column-gap-3 fs-small'>
+            <Row sm="auto" className='border border-success border-3 column-gap-3'>
               <Col className='border border-warning border-2'>English</Col>
               <Col className='border border-warning border-2'>USD</Col>
             </Row>
