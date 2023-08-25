@@ -5,19 +5,19 @@ import {Container, Row, Col} from 'react-bootstrap'
 const AxilBar = () => {
   return (
     <React.Fragment>
-      <Container fluid>
+      <Container>
         <Row>
           <Col>
-            <Row className='border border-success border-3'>
-              <Col xs={3}>English</Col>
-              <Col xs={3}>USD</Col>
+            <Row sm="auto" className='border border-success border-3 column-gap-3 fs-small'>
+              <Col className='border border-warning border-2'>English</Col>
+              <Col className='border border-warning border-2'>USD</Col>
             </Row>
           </Col>
           <Col>
             <Row className='border border-warning border-3'>
-              <Col  xs={3}>Help</Col>
-              <Col  xs={3}>Join Us</Col>
-              <Col xs={3}>Sign In</Col>
+              <Col xs={2}>Help</Col>
+              <Col xs={2}>Join Us</Col>
+              <Col xs={2}>Sign In</Col>
             </Row>
           </Col>
         </Row>
