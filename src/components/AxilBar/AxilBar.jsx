@@ -55,7 +55,7 @@ const AxilBar = () => {
           2) And the column width specified to the nested 'Row' (Row inside a Col) has a working range of (1 to 6 and not 1 to 12)
           may be because there are 2 'Col' in the parent 'Row', so one 'Col' gets 6 columns span and the nested 'Row' in that
           'Col' is given 6 columns to fit next to each other (as may be because there are also 2 'Col' inside that nested 'Row').
-          
+          '
       */}
     </ React.Fragment>
     
