@@ -9,7 +9,7 @@ const AxilBar = () => {
         <Row className='py-2'>
           <Col>
             <Row sm="auto" className=' border-success column-gap-3'>
-              {[...Array(2).keys()].map((_, i) => (
+              {[...Array(2).keys()].map(() => (
                 <button className='pointer'>English</button>
               ))}
               <button className='pointer'>English</button>
