@@ -1,0 +1,13 @@
+{
+    "files.autoSaveDelay": 1000,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.useInlineCompletions": true,
+    "html-css-class-completion.enableEmmetSupport": true,
+    "emmet.preferences": {
+        
+    }
+}

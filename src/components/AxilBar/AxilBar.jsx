@@ -10,7 +10,8 @@ const AxilBar = () => {
           <Col>
             <Row sm="auto" className=' border-success column-gap-3'>
               {[...Array(2).keys()].map((_, i) => (
-                <button as='button' className='' key={i++}>English</button>
+                <button as='button' className={`btn btn-outline-primary btn-sm m-0 border-0 ${style["axil-btn"]}`} key={i++}>English</button>
+                // <button as='button' className={`${style["fs-sm"]} bg-transparent`} key={i++}>English</button>
               ))}
             </Row>
           </Col>
