@@ -10,17 +10,15 @@ const AxilBar = () => {
           <Col>
             <Row sm="auto" className=' border-success column-gap-3'>
               {[...Array(2).keys()].map((_, i) => (
-                <button className='pointer'>English</button>
+                <button as='button' className='' key={i++}>English</button>
               ))}
-              <button className='pointer'>English</button>
-              <button className='pointer'>USD</button>
             </Row>
           </Col>
           <Col>
             <Row sm="auto" className=' border-warning column-gap-3 justify-content-end'>
-              <Col className=''>Help</Col>
-              <Col className=''>Join Us</Col>
-              <Col className=''>Sign In</Col>
+              {[...Array(3).keys()].map((_,i) => (
+                <Col as='button' className=''>Help</Col>
+              ))}
             </Row>
           </Col>
         </Row>
