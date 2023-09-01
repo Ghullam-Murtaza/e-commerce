@@ -1,35 +1,68 @@
-import React from 'react'
-import style from './axilBar.module.scss'
-import {Container, Row, Col} from 'react-bootstrap'
+import React from "react";
+import style from "./axilBar.module.scss";
+import { Container, Row, Col } from "react-bootstrap";
 
 const AxilBar = () => {
   return (
     <React.Fragment>
       <Container>
-        <Row className='py-2'>
+        <Row className="py-2">
           <Col>
-            <Row sm="auto" className=' border-success column-gap-3'>
+            <Row
+              sm="auto"
+              className=" border-success column-gap-3"
+            >
               {[...Array(2).keys()].map((_, i) => (
-                <button as='button' className={`btn btn-outline-primary btn-sm m-0 border-0 ${style["axil-btn"]}`} key={i++}>English</button>
+                <button
+                  as="button"
+                  key={i++}
+                  className={`btn btn-outline-primary btn-sm m-0 border-0 ${style["axil-btn"]}`}
+                >
+                  English.
+                </button>
                 // <button as='button' className={`${style["fs-sm"]} bg-transparent`} key={i++}>English</button>
               ))}
             </Row>
           </Col>
           <Col>
-            <Row sm="auto" className=' border-warning column-gap-3 justify-content-end'>
-              {[...Array(3).keys()].map((_,i) => (
-                <Col as='button' className=''>Help</Col>
+            <Row
+              sm="auto"
+              className=" border-warning column-gap-3 justify-content-end"
+            >
+              {[...Array(3).keys()].map((_, i) => (
+                <Col
+                  as="button"
+                  key={i++}
+                  className=""
+                >
+                  Help
+                </Col>
               ))}
             </Row>
           </Col>
         </Row>
       </Container>
-      
-      <Container className='bg-info mt-5' fluid='md'>
+
+      <Container
+        className="bg-info mt-5"
+        fluid="md"
+      >
         <Row>
-          <Col className='border border-black border-3  '>1 of 3</Col>
-          <Col className='border border-black border-3  ' xs md="auto">Variable width content</Col>
-          <Col className='border border-black border-3  ' xs lg={2}>3 of 3</Col>
+          <Col className="border border-black border-3  ">1 of 3</Col>
+          <Col
+            className="border border-black border-3  "
+            xs
+            md="auto"
+          >
+            Variable width content
+          </Col>
+          <Col
+            className="border border-black border-3  "
+            xs
+            lg={2}
+          >
+            3 of 3
+          </Col>
         </Row>
       </Container>
       {/* Note:
@@ -57,8 +90,7 @@ const AxilBar = () => {
           2) And the column width specified to the nested 'Row' (Row inside a Col) has a working range of (1 to 6 and not 1 to 12).
           
       */}
-    </ React.Fragment>
-    
-  )
-}
-export default AxilBar
+    </React.Fragment>
+  );
+};
+export default AxilBar;

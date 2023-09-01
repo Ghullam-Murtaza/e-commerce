@@ -1,8 +1,10 @@
-@import '../../global.scss';
+@import "../../global.scss";
+
+// always add '!important' keyword to css declarations for elements that has some 'Bootstrap' class applied.
 
 .axil-btn {
-    color: $colorBody !important;
-    padding: 1px 6px !important;
+  color: $colorBody !important;
+  padding: 1px 6px !important;
 }
 
 // .fs-sm {
