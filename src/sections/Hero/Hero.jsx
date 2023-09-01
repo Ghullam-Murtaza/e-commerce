@@ -1,10 +1,8 @@
 const Hero = () => {
   return (
     <div>
-      <header>
-        
-      </header>
+      <header></header>
     </div>
-  )
-}
-export default Hero
+  );
+};
+export default Hero;
