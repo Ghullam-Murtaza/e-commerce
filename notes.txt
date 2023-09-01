@@ -1,0 +1,20 @@
+######################### Auto Reload or Hot Reload not working in Gitpod by default #########################;
+(article link: https://github.com/facebook/create-react-app/issues/11897)
+
+>>> Solution: Copy the following Code to 'node_modules/react-scripts/config/webpackDevServer.config.js' inside the
+         'return' statement of 'module.exports' (normally at the end);
+
+Code:
+
+client: {
+    webSocketURL: { hostname: undefined, pathname: undefined, port: '0' },
+  },
+  port: 3000,
+
+
+######################### Bootstrap intellisense #########################;
+>>> install the following 'vs code' extension;
+IntelliSense for CSS class names in HTML
+
+######################### Gitpod port 3000 or any other port not found error #########################;
+>>> try to change the port in .gitpod.yml file, see documentation on how to (its a try as I did not used it)
