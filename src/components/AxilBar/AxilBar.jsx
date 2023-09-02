@@ -18,7 +18,6 @@ const AxilBar = () => {
                     as="button"
                     key={i++}
                     className={`btn btn-sm border-0 ${style["dropdown-toggle"]}`}
-                    // className={`${style["dropdown-toggle"]}`}
                   >
                     English
                   </button>
