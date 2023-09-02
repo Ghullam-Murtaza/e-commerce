@@ -23,7 +23,6 @@ const AxilBar = () => {
                   </button>
                   <ul className="p-0 m-0 d-none"></ul>
                 </div>
-                // <button as='button' className={`${style["fs-sm"]} bg-transparent`} key={i++}>English</button>
               ))}
             </Row>
           </Col>
