@@ -11,6 +11,16 @@ client: {
   },
   port: 3000,
 
+######################### Bootstrap 'content going outside its box #########################;
+>>> give the 'Row' that exist inside any component other than 'Non-Fluid Container', a 'margin' auto or zero because the
+    'Row' component has default 'negative margin' set on it probably to counter the 'padding' applied by the 'Non-Fluid
+    Container'. and 'Col' has 'padding' applied on to counter that 'negative margin' of 'Row'.
+  So when you see your 'content' going outside its content-box then make sure to see if that 'element' or its
+  'parent' is applying any 'negative margins or paddings'.
+  Normally, you should set 'margin-zero' on 'Row' and 'padding-zero' on 'Col' and then set the desired 'padding' on the
+  'Non-Fluid Container' (like in the axil-bar, I have set the horizontal 'padding' of '8px' on 'Non-Fluid Container' that
+  was by default '-12px').
+
 
 ######################### Bootstrap intellisense #########################;
 >>> install the following 'vs code' extension;

@@ -5,27 +5,31 @@ import { Container, Row, Col } from "react-bootstrap";
 const AxilBar = () => {
   return (
     <React.Fragment>
-      <Container>
-        <Row className="py-2">
-          <Col>
+      <Container className="my-2 px-2">
+        <Row className="align-items-center m-0">
+          <Col className="p-0">
             <Row
               sm="auto"
-              className=" border-success column-gap-3"
+              className=" border-success column-gap-3 align-items-center mx-0"
             >
               {[...Array(2).keys()].map((_, i) => (
-                <button
-                  as="button"
-                  key={i++}
-                  className={`btn btn-outline-primary btn-sm m-0 border-0 ${style["axil-btn"]}`}
-                >
-                  English.
-                </button>
+                <div className="p-0 m-0 bottom-0">
+                  <button
+                    as="button"
+                    key={i++}
+                    className={`btn btn-sm border-0 ${style["dropdown-toggle"]}`}
+                    // className={`${style["dropdown-toggle"]}`}
+                  >
+                    English
+                  </button>
+                  <ul className="p-0 m-0 d-none"></ul>
+                </div>
                 // <button as='button' className={`${style["fs-sm"]} bg-transparent`} key={i++}>English</button>
               ))}
             </Row>
           </Col>
           <Col>
-            <Row
+            {/* <Row
               sm="auto"
               className=" border-warning column-gap-3 justify-content-end"
             >
@@ -38,12 +42,12 @@ const AxilBar = () => {
                   Help
                 </Col>
               ))}
-            </Row>
+            </Row> */}
           </Col>
         </Row>
       </Container>
 
-      <Container
+      {/* <Container
         className="bg-info mt-5"
         fluid="md"
       >
@@ -64,7 +68,7 @@ const AxilBar = () => {
             3 of 3
           </Col>
         </Row>
-      </Container>
+      </Container> */}
       {/* Note:
           fluid='md' does not mean that the Container will become Fluid at 'md' breakpoint but it will become non-fluid (
           with responsive pixel width) at that breakpoint as it's 'media-query' or 'breakpoint' funtionality works quite 

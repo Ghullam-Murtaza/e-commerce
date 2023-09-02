@@ -2,11 +2,30 @@
 
 // always add '!important' keyword to css declarations for elements that has some 'Bootstrap' class applied.
 
-.axil-btn {
+// SCSS for 'dropdown-toggle' when using 'Bootstrap's 'btn' classes
+.dropdown-toggle {
   color: $colorBody !important;
   padding: 1px 6px !important;
+  &::after {
+    content: "\203A";
+    font-size: 20px !important;
+    transform: rotate(90deg) !important;
+    // -webkit-transform: rotate(45deg) !important;
+    padding: 10 !important;
+    margin: 10 !important;
+    display: inline-block;
+    // content: "\276F";
+    // \203A
+  }
+  // &:hover {
+  //   // background-color: transparent !important;
+  // }
 }
-
-// .fs-sm {
-//     font-size: $fontSmall;
-// }
+// SCSS for 'dropdown-toggle' when not using 'Bootstrap's 'btn' classes
+.dropdown-toggle {
+  color: $colorBody !important;
+  padding: 1px 6px !important;
+  background-color: transparent;
+  border: none;
+  font-size: $fontSmall;
+}
