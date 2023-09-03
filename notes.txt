@@ -21,6 +21,17 @@ client: {
   'Non-Fluid Container' (like in the axil-bar, I have set the horizontal 'padding' of '8px' on 'Non-Fluid Container' that
   was by default '-12px').
 
+######################### Font-Awesome Icons in CSS in '::after' sudo element #########################;
+>>> there are 2 ways to add Icons in CSS;
+1) add the '.ttf' font-file of desired 'Icons' in the '@font-face' rule (this method require less code in your
+'repository')
+
+2) put the '.css' file(s) and the files present inside the 'webfonts' folder of your desired 'Icons' inside
+'assets' folder, then 'import' the '.css' icon-file of desired 'Icons' in the css file where you need to use them
+or you can just 'import' at once in your 'App.scss'.
+
+(note: give the correct 'font-weight' to the 'Icon' or it will not show. (like for 'solid' icons, give a
+'font-weight' of '900' to the 'Icon'.))
 
 ######################### Bootstrap intellisense #########################;
 >>> install the following 'vs code' extension;

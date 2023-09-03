@@ -2,10 +2,18 @@
   font-family: "DM Sans";
   font-style: normal;
   src: local("DM Sans"),
-    url("./fonts/DMSans-VariableFont_opsz\,wght.ttf") format("truetype");
+    url("./fonts/DMSans/DMSans-VariableFont_opsz\,wght.ttf") format("truetype");
   // Range of font-weights i.e., from 100 to 900 (works for 'variable fonts', in that you can also use '342' or '781' or
   // 'any No.' from the given Range, so a Range of '1 to 1000' can also be given.
   font-weight: 100 900;
+}
+// Font Awesome Solid Icons
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  src: local("Font Awesome 5 Free"),
+    url("./fonts/fontAwesomeSolidIcons/fa-solid-900.ttf") format("truetype");
+  font-weight: 900;
 }
 // added separate '@font-face rule' for 'italic' font-style but there is not need and is normally used by
 // giving different 'font-family' name as compared to the 'regular' or 'normal' font-style of that same 'font'.
@@ -14,7 +22,7 @@
 //   font-family: "DM Sans italic";
 //   font-style: italic;
 //   src: local("DM Sans"),
-//     url("./fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf") format("truetype");
+//     url("./fonts/DMSans/DMSans-Italic-VariableFont_opsz\,wght.ttf") format("truetype");
 //   font-weight: 100 900;
 // }
 
