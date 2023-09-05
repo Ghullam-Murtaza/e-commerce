@@ -20,6 +20,7 @@ const AxilBar = () => {
                     className={`btn btn-sm border-0 ${style["dropdown-toggle"]}`}
                   >
                     English
+                    bu;tton
                   </button>
                   <ul className="p-0 m-0 d-none"></ul>
                 </div>
