@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useState } from 'react';
+import { Container, Row, Col, Dropdown, Button } from "react-bootstrap";
 import style from "./axilBar.module.scss";
-import { Container, Row, Col } from "react-bootstrap";
+import { axilMainData, axilDropdownMenuData } from '../../data/data';
+
+
+// The forwardRef is important!!
+// Dropdown needs access to the DOM node in order to position the Menu
+const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
+  <Button
+    ref={ref}
+    onClick={(e) => {
+      onClick(e);
+    }}
+    size="sm"
+    className={`${style["axil-dropdown-toggle"]} border-0 d-flex align-items-center`}
+  >
+    {children}
+
+  </Button>
+));
 
 const AxilBar = () => {
   return (
@@ -12,20 +30,40 @@ const AxilBar = () => {
               sm="auto"
               className=" border-success column-gap-3 align-items-center mx-0"
             >
-              {[...Array(2).keys()].map((_, i) => (
-                <div className="p-0 m-0 bottom-0">
+              {[...axilMainData.slice(0, 2)].map((axilMainItem, indexMain) => (
+                <div className="p-0 m-0" key={indexMain++}>
+                  <Dropdown className={`${style["axil-dropdown"]}`}>
+                    {/* AxilBar's Dropdown Toggle 'Button' */}
+                    <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
+                      {axilMainItem}
+                    </Dropdown.Toggle>
+
+                    {/* AxilBar's Dropdown 'Menu' */}
+                    <Dropdown.Menu className={`${style["axil-dropdown-menu"]} border-0`}>
+                      {axilDropdownMenuData[indexMain].map((axilDropdownMenuItem, indexDropdownMenu) => (
+                        <Dropdown.Item className={`${style["axil-dropdown-item"]}`} eventKey={indexDropdownMenu+1} key={indexDropdownMenu++}>
+                          {axilDropdownMenuItem}
+                        </Dropdown.Item>
+                      ))}
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </div>
+                ))}
+              
+            </Row>
+          </Col>
+              {/* {[...Array(2).keys()].map((_, i) => (
+                <div className="p-0 m-0">
                   <button
-                    as="button"
                     key={i++}
-                    className={`btn btn-sm border-0 ${style["dropdown-toggle"]}`}
+                    className={`btn btn-sm border-0 ${style["axil-dropdown-toggle"]}`}
                   >
                     English
                   </button>
                   <ul className="p-0 m-0 d-none"></ul>
                 </div>
-              ))}
-            </Row>
-          </Col>
+              ))} */}
+
           <Col>
             {/* <Row
               sm="auto"
