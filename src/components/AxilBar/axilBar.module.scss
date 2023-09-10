@@ -2,51 +2,79 @@
 
 // always add '!important' keyword to css declarations for elements that has some 'Bootstrap' class applied.
 
+// AxilBar's Dropdowns on Left Side
 .axil-dropdown {
   max-width: 70px;
 
-  // SCSS for 'axil-dropdown-toggle' when using 'Bootstrap's 'btn' classes
+  // SCSS for 'axil-dropdown-toggle' when using 'Bootstrap's 'Button' component
   .axil-dropdown-toggle {
     color: var(--color-body) !important;
-    background-color: transparent !important;
     padding: 1px 6px !important;
+
+    // Dropdown Toggle's Icon 
     &::after {
-      content: "\f107";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      // stroke-width: 1px;
-      font-size: 14px;
-      margin-left: 5px;
-      margin-top: 1px;
-      // border: 1px solid black;
-      display: inline-block;
+      content: url("../../assets/icons/chevron/chevronDown1.svg");
+      // font-family: "Font Awesome 5 Free";
+      // font-weight: 900;
+      stroke: var(--color-body) !important;
+      stroke-width: 1px !important;
+      font-size: 5px;
+      // margin-left: 5px;
+      // margin-top: 1px;
+      border: 1px solid black;
+      // display: inline-block;
     }
   }  
+
   .axil-dropdown-menu {
     min-width: 6.7rem !important;
     box-shadow: var(--shadow-primary) !important;
     // display: block !important;
     top: -2.5px !important;
-    inset: 0px auto auto 0px;
-    transform: translate3d(0px, 24px, 0px);
-    padding: 5px 0px !important;
+    inset: 0px auto auto 0px !important;
+    transform: translate3d(0px, 24px, 0px) !important;
+    padding: 5px 10px !important;
+    border-radius: 4px !important;
+
     // visibility: hidden !important;
     // opacity: 0 !important;
     // transition: var(--transition) !important;  
     
     .axil-dropdown-item {
-      font-size: 14px;
+      font-size: 14px !important;
       border-radius: 6px !important;
-      // margin: 5px !important;
-      padding: 2.5px 10px !important;
+      margin-top: 5px !important;
+      padding: 1.6px 10px 2.5px !important;
+      align-self: center !important;
+      justify-self: center !important;
+      &:first-of-type {
+        margin-top: 0px !important;
+      }
+      
       &:hover {
-          background-color: var(--color-secondary) !important;
-          color: var(--color-white) !important;
+        background-color: var(--color-secondary) !important;
+        color: var(--color-white) !important;
+        transition: var(--transition) !important;  
       }
     }
   }  
 }
-// SCSS for 'axil-dropdown-toggle' when not using 'Bootstrap's 'btn' classes
+// AxilBar's Links on Right Side
+.axil-link {
+  color: var(--color-body) !important;
+  line-height: var(--line-height-b2) !important;
+  margin: 0px 18px !important;
+  display: inline-block !important;
+
+  &:hover {
+    color: var(--color-primary) !important;
+    transition: var(--transition) !important; 
+  }  
+}
+
+
+
+// SCSS for 'axil-dropdown-toggle' when not using 'Bootstrap's 'Button' component
 // .axil-dropdown-toggle {
 //   color: $colorBody !important;
 //   padding: 1px 6px !important;

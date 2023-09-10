@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Row, Col, Dropdown, Button } from "react-bootstrap";
 import style from "./axilBar.module.scss";
 import { axilMainData, axilDropdownMenuData } from '../../data/data';
@@ -13,7 +13,7 @@ const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
       onClick(e);
     }}
     size="sm"
-    className={`${style["axil-dropdown-toggle"]} border-0 d-flex align-items-center`}
+    className={`${style["axil-dropdown-toggle"]} border-0 d-flex align-items-center bg-transparent`}
   >
     {children}
 
@@ -21,90 +21,70 @@ const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
 ));
 
 const AxilBar = () => {
+
   return (
     <React.Fragment>
-      <Container className="my-2 px-2">
+      <Container className={`${style["axil-bar"]} p-2`}>
         <Row className="align-items-center m-0">
+          {/* AxilBar's Dropdown Column */}
           <Col className="p-0">
             <Row
               sm="auto"
               className=" border-success column-gap-3 align-items-center mx-0"
             >
               {[...axilMainData.slice(0, 2)].map((axilMainItem, indexMain) => (
-                <div className="p-0 m-0" key={indexMain++}>
-                  <Dropdown className={`${style["axil-dropdown"]}`}>
+                  // AxilBar's Dropdown
+                  <Dropdown className={`${style["axil-dropdown"]} p-0`} key={indexMain++}>
                     {/* AxilBar's Dropdown Toggle 'Button' */}
-                    <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
+                    <Dropdown.Toggle 
+                      as={CustomToggle} id="dropdown-custom-components">
+
                       {axilMainItem}
                     </Dropdown.Toggle>
 
                     {/* AxilBar's Dropdown 'Menu' */}
-                    <Dropdown.Menu className={`${style["axil-dropdown-menu"]} border-0`}>
-                      {axilDropdownMenuData[indexMain].map((axilDropdownMenuItem, indexDropdownMenu) => (
-                        <Dropdown.Item className={`${style["axil-dropdown-item"]}`} eventKey={indexDropdownMenu+1} key={indexDropdownMenu++}>
-                          {axilDropdownMenuItem}
-                        </Dropdown.Item>
-                      ))}
-                    </Dropdown.Menu>
+                      <Dropdown.Menu className={`${style["axil-dropdown-menu"]} border-0`}>
+                        {axilDropdownMenuData[indexMain].map((axilDropdownMenuItem, indexDropdownMenu) => (
+                          // AxilBar's Dropdown 'Item'
+                          <Dropdown.Item className={`${style["axil-dropdown-item"]}`} eventKey={indexDropdownMenu+1} key={indexDropdownMenu++}>
+
+                            {axilDropdownMenuItem}
+                          </Dropdown.Item>
+                        ))}
+                      </Dropdown.Menu>
                   </Dropdown>
-                </div>
+
                 ))}
-              
             </Row>
           </Col>
-              {/* {[...Array(2).keys()].map((_, i) => (
-                <div className="p-0 m-0">
-                  <button
-                    key={i++}
-                    className={`btn btn-sm border-0 ${style["axil-dropdown-toggle"]}`}
-                  >
-                    English
-                  </button>
-                  <ul className="p-0 m-0 d-none"></ul>
-                </div>
-              ))} */}
 
-          <Col>
-            {/* <Row
+          {/* AxilBar's 2nd Column */}
+          <Col className="p-0">
+            <Row
               sm="auto"
-              className=" border-warning column-gap-3 justify-content-end"
+              className="border-1 border-success align-items-center justify-content-end mx-0"
             >
-              {[...Array(3).keys()].map((_, i) => (
-                <Col
-                  as="button"
-                  key={i++}
-                  className=""
-                >
-                  Help
-                </Col>
-              ))}
-            </Row> */}
+              {[...axilMainData.slice(2)].map((axilMainItem, indexMain) => (
+                  // AxilBar's Right Side Links
+                  <Button    
+                    key={indexMain++}
+                    as="a"   
+                    href="#"           
+                    size="sm"
+                    className={`${style["axil-link"]} border-0 p-0 bg-transparent`}
+                  >
+                    {axilMainItem}
+
+                  </Button>
+
+                ))}
+            </Row>
           </Col>
         </Row>
       </Container>
 
-      {/* <Container
-        className="bg-info mt-5"
-        fluid="md"
-      >
-        <Row>
-          <Col className="border border-black border-3  ">1 of 3</Col>
-          <Col
-            className="border border-black border-3  "
-            xs
-            md="auto"
-          >
-            Variable width content
-          </Col>
-          <Col
-            className="border border-black border-3  "
-            xs
-            lg={2}
-          >
-            3 of 3
-          </Col>
-        </Row>
-      </Container> */}
+
+
       {/* Note:
           fluid='md' does not mean that the Container will become Fluid at 'md' breakpoint but it will become non-fluid (
           with responsive pixel width) at that breakpoint as it's 'media-query' or 'breakpoint' funtionality works quite 
