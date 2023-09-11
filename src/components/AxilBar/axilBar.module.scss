@@ -13,16 +13,16 @@
 
     // Dropdown Toggle's Icon 
     &::after {
-      content: url("../../assets/icons/chevron/chevronDown1.svg");
-      // font-family: "Font Awesome 5 Free";
-      // font-weight: 900;
-      stroke: var(--color-body) !important;
-      stroke-width: 1px !important;
-      font-size: 5px;
-      // margin-left: 5px;
-      // margin-top: 1px;
-      border: 1px solid black;
-      // display: inline-block;
+      // content: url("../../assets/icons/chevron/chevronDown1.svg");
+      // filter: invert(51%) sepia(0%) saturate(636%) hue-rotate(135deg) brightness(87%) contrast(64%);
+      // stroke: var(--color-body) !important;
+      // stroke-width: 1px !important;
+      content: "\e900";
+      font-family: "chevronAll";
+      font-weight: 400;
+      margin-left: 2px;
+      margin-top: 1px;
+      // border: 1px solid black;
     }
   }  
 
