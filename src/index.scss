@@ -7,14 +7,25 @@
   // 'any No.' from the given Range, so a Range of '1 to 1000' can also be given.
   font-weight: 100 900;
 }
-// Font Awesome Solid Icons
+// Chevron Icons
+// font-icons are not variable fonts by default (i.e., you have to give different 'svg' for every 'font-weight' you want to add in your 'font-icons'
 @font-face {
-  font-family: "Font Awesome 5 Free";
+  font-family: "chevronAll";
   font-style: normal;
-  src: local("Font Awesome 5 Free"),
-    url("./fonts/fontAwesomeSolidIcons/fa-solid-900.ttf") format("truetype");
-  font-weight: 900;
+  src: local("chevronAll"),
+    url("./assets/icons/chevronAll.woff") format("woff");
+  // font-weight: 100 1000;  // t his does not make it 'variable' but gives 'thin' or small 'font-weight', otherwise default 'font-weight' was big
 }
+
+// Font Awesome Solid Icons
+// @font-face {
+//   font-family: "Font Awesome 5 Free";
+//   font-style: normal;
+//   src: local("Font Awesome 5 Free"),
+//     url("./fonts/fontAwesomeSolidIcons/fa-solid-900.ttf") format("truetype");
+//   font-weight: 900;
+// }
+
 // added separate '@font-face rule' for 'italic' font-style but there is not need and is normally used by
 // giving different 'font-family' name as compared to the 'regular' or 'normal' font-style of that same 'font'.
 // it is used directly by giving the 'font-family' name instead of giving the 'font-style' of 'italic' in CSS
