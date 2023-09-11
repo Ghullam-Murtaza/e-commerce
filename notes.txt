@@ -33,6 +33,18 @@ or you can just 'import' at once in your 'App.scss'.
 (note: give the correct 'font-weight' to the 'Icon' or it will not show. (like for 'solid' icons, give a
 'font-weight' of '900' to the 'Icon'.))
 
+######################### 'SVG Icons in CSS ::after pseudo-element' #########################;
+> By using the following Tweaks, you can only change the Color of the 'SVG Icon' but not its 'stroke' and 'stroke-width'.
+::after {
+  content: url("../../assets/icons/chevron/chevronDown1.svg");
+  filter: invert(51%) sepia(0%) saturate(636%) hue-rotate(135deg) brightness(87%) contrast(64%);
+  stroke: var(--color-body) !important;
+  stroke-width: 1px !important;
+}
+
+>>> So, I converted the 'SVG Icons' in 'Font-Icons', so they can be styled using styling properties used for 'text'.
+And in order to change the 'font-weight' of the 'Font-Icons', you need to create different 'SVG Icons' for every desired 'font-weight' value.
+
 ######################### Bootstrap intellisense #########################;
 >>> install the following 'vs code' extension;
 IntelliSense for CSS class names in HTML
