@@ -7,15 +7,25 @@
   // 'any No.' from the given Range, so a Range of '1 to 1000' can also be given.
   font-weight: 100 900;
 }
-// Chevron Icons
+// Custom Icons
 // font-icons are not variable fonts by default (i.e., you have to give different 'svg' for every 'font-weight' you want to add in your 'font-icons'
 @font-face {
-  font-family: "chevronAll";
+  font-family: "Custom Icons";
   font-style: normal;
-  src: local("chevronAll"),
-    url("./assets/icons/chevronAll.woff") format("woff");
+  src: local("Custom Icons"),
+    url("./assets/icons/custom-icons.woff") format("woff");
   // font-weight: 100 1000;  // t his does not make it 'variable' but gives 'thin' or small 'font-weight', otherwise default 'font-weight' was big
 }
+
+// Chevron Icons
+// font-icons are not variable fonts by default (i.e., you have to give different 'svg' for every 'font-weight' you want to add in your 'font-icons'
+// @font-face {
+//   font-family: "chevronAll";
+//   font-style: normal;
+//   src: local("chevronAll"),
+//     url("./assets/icons/chevronAll.woff") format("woff");
+//   // font-weight: 100 1000;  // t his does not make it 'variable' but gives 'thin' or small 'font-weight', otherwise default 'font-weight' was big
+// }
 
 // Font Awesome Solid Icons
 // @font-face {
