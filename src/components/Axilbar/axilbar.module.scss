@@ -54,17 +54,22 @@
     }
   }  
 }
-// AxilBar's Links on Right Side
-.axil-link {
-  color: var(--color-body) !important;
-  line-height: var(--line-height-b2) !important;
-  margin: 0px 18px !important;
-  display: inline-block !important;
-
-  &:hover {
-    color: var(--color-primary) !important;
-    transition: var(--transition) !important; 
-  }  
+// AxilBar's Right Column
+.axil-right-column {
+  column-gap: 32px !important;
+  padding-right: 6px !important;
+  
+  // AxilBar's Links on Right Side
+  .axil-link {
+    color: var(--color-body) !important;
+    line-height: var(--line-height-b2) !important;
+    display: inline-block !important;
+  
+    &:hover {
+      color: var(--color-primary) !important;
+      transition: var(--transition) !important; 
+    }  
+  }
 }
 
 
