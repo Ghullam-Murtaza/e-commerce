@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Dropdown, Button } from "react-bootstrap";
-import style from "./axilBar.module.scss";
+import style from "./axilbar.module.scss";
 import { axilMainData, axilDropdownMenuData } from '../../data/data';
 
 
@@ -22,9 +22,9 @@ const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
 
 const AxilBar = () => {
 
-  return (
+ return (
     <React.Fragment>
-      <Container className={`${style["axil-bar"]} p-2`}>
+      <Container className={`${style["axil-bar"]} p-2 border`}>
         <Row className="align-items-center m-0">
           {/* AxilBar's Dropdown Column */}
           <Col className="p-0">
@@ -62,7 +62,7 @@ const AxilBar = () => {
           <Col className="p-0">
             <Row
               sm="auto"
-              className="border-1 border-success align-items-center justify-content-end mx-0"
+              className={`${style["axil-right-column"]} border-1 border-success align-items-center justify-content-end mx-0`}
             >
               {[...axilMainData.slice(2)].map((axilMainItem, indexMain) => (
                   // AxilBar's Right Side Links

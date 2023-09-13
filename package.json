@@ -2,6 +2,9 @@
   "name": "e-commerce",
   "version": "0.1.0",
   "private": true,
+  "babel": {
+    "plugins": ["@babel/plugin-proposal-export-default-from"]
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -38,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.22.17",
     "sass": "^1.63.4"
   },
   "packageManager": "yarn@1.22.19"
