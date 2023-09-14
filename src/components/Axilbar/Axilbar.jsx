@@ -42,10 +42,10 @@ const AxilBar = () => {
                       {axilMainItem}
                     </Dropdown.Toggle>
 
-                    {/* AxilBar's Dropdown 'Menu' */}
+                    {/* AxilBar's Dropdown 'Menus' */}
                       <Dropdown.Menu className={`${style["axil-dropdown-menu"]} border-0`}>
                         {axilDropdownMenuData[indexMain].map((axilDropdownMenuItem, indexDropdownMenu) => (
-                          // AxilBar's Dropdown 'Item'
+                          // AxilBar's Dropdown 'Items'
                           <Dropdown.Item className={`${style["axil-dropdown-item"]}`} eventKey={indexDropdownMenu+1} key={indexDropdownMenu++}>
 
                             {axilDropdownMenuItem}

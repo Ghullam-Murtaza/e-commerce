@@ -7,7 +7,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import style from "./mainMenu.module.scss";
-import { logo } from "../../assets/images/images"
+import { logoDark, logoLight } from "../../assets/images/images"
+import { mainNavData, mainNavSubMenuData } from '../../data/data';
 
 const MainMenu = () => {
 
@@ -16,10 +17,19 @@ const MainMenu = () => {
       <Container className=" border-dark">
         <Navbar expand="lg" className={`${style["navbar"]} border border-dark`}>
           {/* <Container> */}
-            <Navbar.Brand href="#">
-                <img src={logo} alt="logo" />
-            </Navbar.Brand>
-            
+          {/* Logo */}
+            <div>
+              {/* logo dark */}
+              <Navbar.Brand href="#" className={`${style["logo"]} d-block m-0`}>
+                <img src={logoDark} alt="logo" className={` `}/>
+              </Navbar.Brand>
+              {/* logo light */}
+              <Navbar.Brand href="#" className={`${style["logo"]} d-none m-0`}>
+                <img src={logoLight} alt="logo" />
+              </Navbar.Brand>
+            </div>
+
+            {/* Middle Links */}
             <Navbar.Offcanvas
               id={"offcanvasNavbar-expand-lg"}
               aria-labelledby={"offcanvasNavbarLabel-expand-lg"}
@@ -31,27 +41,27 @@ const MainMenu = () => {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">Link</Nav.Link>
-                  <NavDropdown
-                    title="Dropdown"
-                    id={"offcanvasNavbarDropdown-expand-lg"}
-                  >
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                      Something else here
-                    </NavDropdown.Item>
-                  </NavDropdown>
+                {/* Main Nav */}
+                <Nav className="">
+                  <Nav.Item>
+                    {/* Main Nav's 'Items' */}
+                      {mainNavData.map((mainNavItem, i) => (
+                        <Nav.Link href="#action1" key={i++}>{mainNavItem}</Nav.Link>
+                        // Main Nav's 'Sub Menus'
+                        {mainNavSubMenuData[mainNavItem]?.map((mainNavSubMenuItem, i) => (
+                          <Nav className="flex-column" key={i++}>
+                            <Nav.Link href="#action1">{mainNavSubMenuItem}</Nav.Link>
+                          </Nav>
+                        ))}
+
+                      ))}
+                    </Nav.Item>
+                  
                 </Nav>
                
               </Offcanvas.Body>
             </Navbar.Offcanvas>
-             <Form className="d-flex">
+             {/* <Form className="d-flex">
                   <Form.Control
                     type="search"
                     placeholder="Search"
@@ -59,7 +69,7 @@ const MainMenu = () => {
                     aria-label="Search"
                   />
                   <Button variant="outline-success">Search</Button>
-                </Form>
+                </Form> */}
                 <Navbar.Toggle aria-controls={"offcanvasNavbar-expand-lg"} />
           {/* </Container> */}
         </Navbar>

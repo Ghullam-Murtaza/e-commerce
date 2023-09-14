@@ -4,4 +4,5 @@
 // export logo from "./logo/logo.png";
 
 // imported from a 'default export' and exported as 'named export' (so when needed I can 'import' multiples 'images' in one line using 'named imports')
-export {default as logo} from "./logo/logo.png";
+export {default as logoDark} from "./logo/logo-dark.png";
+export {default as logoLight} from "./logo/logo-light.png";
