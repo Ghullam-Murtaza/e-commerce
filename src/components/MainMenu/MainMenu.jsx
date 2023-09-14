@@ -41,11 +41,21 @@ const MainMenu = () => {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
+                {/* Main Nav */}
                 <Nav className="">
-                  {mainNavData.map((mainNavItem, i) => (
-                    <Nav.Link href="#action1" key={i++}>{mainNavItem}</Nav.Link>
+                  <Nav.Item>
+                    {/* Main Nav's 'Items' */}
+                      {mainNavData.map((mainNavItem, i) => (
+                        <Nav.Link href="#action1" key={i++}>{mainNavItem}</Nav.Link>
+                        // Main Nav's 'Sub Menus'
+                        {mainNavSubMenuData[mainNavItem]?.map((mainNavSubMenuItem, i) => (
+                          <Nav className="flex-column" key={i++}>
+                            <Nav.Link href="#action1">{mainNavSubMenuItem}</Nav.Link>
+                          </Nav>
+                        ))}
 
-                  ))}
+                      ))}
+                    </Nav.Item>
                   
                 </Nav>
                
