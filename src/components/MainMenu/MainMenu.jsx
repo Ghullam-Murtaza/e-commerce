@@ -45,7 +45,6 @@ const MainMenu = () => {
                 <Nav className="">
                   <Nav.Item>
                     {/* Main Nav's 'Items' */}
-                    
                       {mainNavData.map((mainNavItem, i) => (
                         <Nav.Link href="#action1" key={i++}>{mainNavItem}</Nav.Link>
                         // Main Nav's 'Sub Menus'
@@ -54,7 +53,6 @@ const MainMenu = () => {
                             <Nav.Link href="#action1">{mainNavSubMenuItem}</Nav.Link>
                           </Nav>
                         ))}
-
 
                       ))}
                     </Nav.Item>
