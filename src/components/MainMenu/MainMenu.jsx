@@ -29,8 +29,6 @@ const MainMenu = () => {
               </Navbar.Brand>
             </div>
 
-
-
             {/* Middle Links */}
             <Navbar.Offcanvas
               id={"offcanvasNavbar-expand-lg"}
