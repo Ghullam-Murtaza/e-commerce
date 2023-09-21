@@ -16,7 +16,7 @@ export const mainNavSubMenuData = {
               "Product Variation 5", "Product Variation 6", "Product Variation 7", "Product Variation 8"],
     "Pages":  ["Wishlist", "Cart", "Checkout", "Account", "Sign Up", "Sign In", "Forgot Password", "Reset Password",
                "Privacy Policy", "Coming Soon", "404 Error", "Typography"],
-    "Home":  ["Blog List", "Blog Grid", "Standard Post", "Gallery Post", "Video Post", "Audio Post", "Quote Post"]
+    "Blog":  ["Blog List", "Blog Grid", "Standard Post", "Gallery Post", "Video Post", "Audio Post", "Quote Post"]
 };
 
                                     
