@@ -44,16 +44,18 @@ const MainMenu = () => {
               <Offcanvas.Body>
 
                 {/* Main Nav */}
-                <Nav className="">
+                <Nav className={`${style["main-nav"]}`}>
                   
                   {mainNavData.map((mainNavItem, indexNav) => (
                     // Main Nav's 'Items'
-                    <Nav.Item className={`position-relative border border-1 border-black`}
+                    <Nav.Item className={`${style["nav-item"]} position-relative  border-1 border-black`}
                       onMouseEnter={() => (setActiveSubMenu(indexNav))}
                       onMouseLeave={() => (setActiveSubMenu())}
                     >
                       {/* Main Nav's 'Links' */} 
-                      <Nav.Link href="#action1" key={indexNav++}>
+                      <Nav.Link  className={`${style["nav-link"]} d-flex align-items-center position-relative p-0 border border-1 border-primary`}
+                        href="#action1" key={indexNav++}
+                      >
                         {mainNavItem}
                       </Nav.Link>
 
