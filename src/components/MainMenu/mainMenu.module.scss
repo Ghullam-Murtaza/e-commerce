@@ -19,31 +19,32 @@
     }
     .main-nav {
       column-gap: 32px !important;
+    //   border: 1px solid red;
+      
 
     
         .nav-item {
+            // border: 1px solid red;
 
             .nav-link {
-            color: var(--color-heading) !important;
-            font-weight: 700 !important;
-            font-size: 15px !important;
-            font-family: var(--font-primary) !important;
-            line-height: 80px !important;
-            height: 80px !important;
-            transition: var(--transition) !important;          
+                color: var(--color-heading) !important;
+                font-weight: 700 !important;
+                font-size: 15px !important;
+                font-family: var(--font-primary) !important;
+                line-height: 80px !important;
+                height: 80px !important;
+                transition: var(--transition) !important;   
             
             &::before {
                 content: "" !important;
                 background-color: var(--color-black) !important;
-                height: 2px !important;
+                height: 2.5px !important;
                 width: 0px !important;
                 opacity: 0 !important;
                 position: absolute !important;
-                bottom: 29px !important;
+                bottom: 28px !important;
                 left: 0px !important;
                 transition: 0.5s !important;
-                // border: 1px solid yellow !important;
-                
             }
             
             &:hover {
@@ -51,11 +52,35 @@
                 &::before {
                 width: 100% !important;
                 opacity: 1 !important;
-
                 }
+            }
+            // only 'nav-items' that have 'submenus' will have a 'chevron-icon' next to their 'nav-link'
+            &.nav-link-with-chevron {
+                margin-right: 15px !important;
+
+                &::after {
+                  content: "\e917";
+                  font-family: "Custom Icons";
+                  font-weight: 400;
+                  color: #c6c6c6;
+                  font-size: var(--font-size-b1);
+                  position: absolute;
+                  right: -17px;
+                }
+
             }
             
             }
+
+            // &>.nav-item-with-submenu::after {
+            //     content: "\e917";
+            //     font-family: "Custom Icons";
+            //     font-weight: 400;
+            //     color: #c6c6c6;
+            //     font-size: var(--font-size-b1);
+            //     position: absolute;
+            //     right: -17px;
+            // }
 
             .nav-sub-menu {
             background-color:  var(--color-white) !important;
@@ -76,11 +101,10 @@
             font-weight: 500 !important;
             padding: 5px 15px !important;
             z-index: 1 !important;
-            //   transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
 
                 &:hover {
                 color: var(--color-secondary) !important;
-                transition: all 0.3s ease-in-out !important;
                 }
             }
         }

@@ -52,8 +52,11 @@ const MainMenu = () => {
                       onMouseEnter={() => (setActiveSubMenu(indexNav))}
                       onMouseLeave={() => (setActiveSubMenu())}
                     >
-                      {/* Main Nav's 'Links' */} 
-                      <Nav.Link  className={`${style["nav-link"]} d-flex align-items-center position-relative p-0 border border-1 border-primary`}
+                      {/* Main Nav's 'Links' */}
+
+                      {/* only 'nav-items' that have 'submenus' will have a 'chevron-icon' next to their 'nav-link' */}
+                      <Nav.Link  className={`${mainNavSubMenuData[mainNavItem] && style["nav-link-with-chevron"]} ${style["nav-link"]}
+                                             d-flex align-items-center position-relative p-0 border-1 border-primary`}
                         href="#action1" key={indexNav++}
                       >
                         {mainNavItem}
