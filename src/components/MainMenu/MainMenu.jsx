@@ -36,11 +36,13 @@ const MainMenu = () => {
               aria-labelledby={"offcanvasNavbarLabel-expand-lg"}
               placement="end"
             >
+
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={"offcanvasNavbarLabel-expand-lg"}>
                   Offcanvas
                 </Offcanvas.Title>
               </Offcanvas.Header>
+
               <Offcanvas.Body>
 
                 {/* Main Nav */}
@@ -100,6 +102,23 @@ const MainMenu = () => {
                
               </Offcanvas.Body>
             </Navbar.Offcanvas>
+
+              
+              {/* Right Side 'Action List' */}
+            <Nav className={`${style["nav-sub-menu"]} flex-column rounded-1 position-absolute top-100 start-0 `}>
+              
+              {[...Array(4).keys()].map((_, i) => (
+                
+                // Right Side 'Action List Items'
+                <Nav.Link className={`d-block rounded-1 overflow-hidden`} href="#action1" key={i++}>
+                  {i}
+                </Nav.Link>
+
+              ))}
+            </Nav>
+            
+            {/* ))} */}
+            
              {/* <Form className="d-flex">
                   <Form.Control
                     type="search"
