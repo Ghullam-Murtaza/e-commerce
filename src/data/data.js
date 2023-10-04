@@ -18,5 +18,24 @@ export const mainNavSubMenuData = {
                "Privacy Policy", "Coming Soon", "404 Error", "Typography"],
     "Blog":  ["Blog List", "Blog Grid", "Standard Post", "Gallery Post", "Video Post", "Audio Post", "Quote Post"]
 };
+// Right Side 'Action List'
+export const rightActionList = [
+                                    {
+                                        "class": "search",
+                                        "href": "#"
+                                    },
+                                    {
+                                        "class": "wishlist",
+                                        "href": "#"
+                                    },
+                                    {
+                                        "class": "shopping-cart",
+                                        "href": "#"
+                                    },
+                                    {
+                                        "class": "user-account",
+                                        "href": "#"
+                                    },
+];
 
                                     
