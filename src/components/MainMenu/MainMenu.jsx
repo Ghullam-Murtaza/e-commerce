@@ -7,6 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import style from "./mainMenu.module.scss";
+// import "./style.css";
 import { logoDark, logoLight } from "../../assets/images/images"
 import { mainNavData, mainNavSubMenuData } from '../../data/data';
 
@@ -102,10 +103,77 @@ const MainMenu = () => {
                
               </Offcanvas.Body>
             </Navbar.Offcanvas>
+            
+
+
+
+            {/* Right Side 'Action List' */}
+
+
+
+            <ul className="right-action-list">
+              <li className="axil-search">
+                <a href="javascript:void(0)" className="header-search-icon" title="Search">
+                    <i className="flaticon-magnifying-glass"></i>
+                </a>
+              </li>
+              <li className="wishlist">
+                <a href="wishlist.html">
+                  <i className="flaticon-heart"></i>
+                </a>
+              </li>
+              <li className="shopping-cart">
+                <a href="#" className="cart-dropdown-btn">
+                  <span className="cart-count">3</span>
+                  <i className="flaticon-shopping-cart"></i>
+                </a>
+              </li>
+              <li className="my-account">
+                <a href="javascript:void(0)" className="open">
+                  <i className="flaticon-person"></i>
+                </a>
+                {/* <div className="my-account-dropdown open">
+                  <span className="title">QUICKLINKS</span>
+                  <ul>
+                    <li>
+                        <a href="my-account.html">My Account</a>
+                    </li>
+                    <li>
+                        <a href="#">Initiate return</a>
+                    </li>
+                    <li>
+                        <a href="#">Support</a>
+                    </li>
+                    <li>
+                        <a href="#">Language</a>
+                    </li>
+                  </ul>
+                  <div className="login-btn">
+                    <a href="sign-in.html" className="axil-btn btn-bg-primary">Login</a>
+                  </div>
+                  <div className="reg-footer text-center">No account yet? <a href="sign-up.html" className="btn-link">REGISTER HERE.</a></div>
+                </div> */}
+              </li>
+
+              {/* <li className="axil-mobile-toggle">
+                <button className="menu-btn mobile-nav-toggler">
+                  <i className="flaticon-menu-2"></i>
+                </button>
+              </li> */}
+            </ul>
+
+
+
+
+
+
+
+
+
 
               
               {/* Right Side 'Action List' */}
-            <Nav className={`${style["nav-sub-menu"]} flex-column rounded-1 position-absolute top-100 start-0 `}>
+            {/* <Nav className={`${style["nav-sub-menu"]} flex-column rounded-1 position-absolute top-100 start-0 `}>
               
               {[...Array(4).keys()].map((_, i) => (
                 
@@ -115,10 +183,23 @@ const MainMenu = () => {
                 </Nav.Link>
 
               ))}
-            </Nav>
+            </Nav> */}
             
             {/* ))} */}
             
+
+
+
+
+
+
+
+
+
+
+
+
+
              {/* <Form className="d-flex">
                   <Form.Control
                     type="search"
