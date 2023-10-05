@@ -21,7 +21,7 @@ export const mainNavSubMenuData = {
 // Right Side 'Action List'
 export const rightActionList = [
                                     {
-                                        "class": "search",
+                                        "class": {"li": ""},
                                         "href": "#"
                                     },
                                     {
