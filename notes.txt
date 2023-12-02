@@ -1,9 +1,4 @@
 
-
-
-
-
-
 ######################### Auto Reload or Hot Reload not working in Gitpod by default #########################;
 (article link: https://github.com/facebook/create-react-app/issues/11897)
 
