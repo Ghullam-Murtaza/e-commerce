@@ -1,3 +1,4 @@
+
 import Axilbar from "../../components/Axilbar/Axilbar"
 import MainMenu from "../../components/MainMenu/MainMenu"
 import Hero from "../../sections/Hero/Hero"
