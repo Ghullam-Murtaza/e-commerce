@@ -1,6 +1,4 @@
 
-
-
 import { useEffect } from "react";
 import Home from './pages/Home/Home';
 import './App.scss';
